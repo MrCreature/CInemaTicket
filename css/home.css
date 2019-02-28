@@ -1,0 +1,26 @@
+#home-body .custom-deck {
+    margin : 50px 400px;
+}
+#home-body .cara-container{
+    margin : 5px 400px;
+}
+.custom-card{
+    width: 100%;
+    object-fit: contain;
+}
+ .footer{
+    background-color: lightgrey;
+    height: 150px;
+}
+ .custom-nav {
+     font-size: 20px;
+ }
+ .custom-nav li{
+     padding: 0 2px;
+     border-radius: 7px;
+ }
+
+ .custom-nav li:hover{
+     background-color: lightgrey;
+ }
+

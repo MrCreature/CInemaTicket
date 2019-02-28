@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html  lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WELCOME TO SPCINEMA</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+</head>
+<body id="login-body">
+<div class="container-fluid custom-nav  bg-light">
+    <nav class="navbar navbar-default navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <div class="navbar-collapse">
+            <ul class="navbar-nav ml-auto mr-4">
+                <li class="nav-item">
+                    <a class="nav-link" href="Home.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Movies.html">Movies</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="Login.html">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="AboutUs.html">About Us</a>
+                </li>
+            </ul>
+            <form>
+                <div  class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </div>
+            </form>
+        </div>
+    </nav>
+</div>
+<div class="container justify-content-center py-5 shadow-lg form-div">
+    <form>
+        <h1 class="display-4">New User</h1>
+        <br><br>
+        <div class="form-group row">
+            <div class="form-group col-md-6">
+                <label for="fname">First Name</label>
+                <input type="text" class="form-control" id="fname" placeholder="First Name">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="lname">Last Name</label>
+                <input type="text" class="form-control" id="lname" placeholder="Last Name">
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col">
+                <label for="gender">Gender</label>
+                <select id="gender" class="form-control">
+                    <option selected>Male</option>
+                    <option>Female</option>
+                    <option>Other</option>
+                </select>
+            </div>
+            <div class="form-group col">
+                <label for="age">Age</label>
+                <input type="text" class="form-control" id="age" placeholder="Age">
+            </div>
+        </div>
+        <br>
+        <div class="form-group row">
+            <div class="form-group col-md-6">
+                <label for="email">Email-Id</label>
+                <input type="email" class="form-control" id="email" placeholder="Email">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="pass">Password</label>
+                <input type="password" class="form-control" id="pass" placeholder="Password">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputAddress">Address</label>
+            <textarea class="form-control" id="inputAddress" rows="3"></textarea>
+        </div>
+        <div class="form-row">
+            <div class="form-group col">
+                <label for="city">City</label>
+                <input type="text" class="form-control" id="city">
+            </div>
+            <div class="form-group col">
+                <label for="state">State</label>
+                <input type="text" class="form-control" id="state">
+            </div>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-dark" style="width: 30%">Register</button>
+    </form>
+</div>
+<div class="footer sticky-bottom">
+    <p>THIS IS A FOOTER</p>
+</div>
+</body>
+</html>

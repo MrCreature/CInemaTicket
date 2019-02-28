@@ -1,0 +1,59 @@
+
+#login-body .form-div {
+    width: 40%;
+    padding: 0 50px;
+    margin-top: 120px;
+    margin-bottom: 120px;
+}
+
+ .footer-incomplete {
+    height: 150px;
+    width: 100%;
+    position: absolute;
+    background-color: lightgrey;
+    bottom: 0;
+}
+ .footer{
+    background-color: lightgrey;
+    height: 150px;
+}
+.custom-nav {
+    font-size: 20px;
+}
+.custom-nav li{
+    padding: 0 2px;
+    border-radius: 7px;
+}
+.custom-nav .active{
+    color: red;
+}
+.custom-nav li:hover{
+    background-color: lightgrey;
+}
+.custom-card{
+    width: 100%;
+    object-fit: contain;
+}
+
+ul.menu {
+    list-style-type: none;
+}
+
+ul.menu li a {
+    height: 60px;
+    width : 60px;
+    margin: 0 10px;
+    padding: 0 5px;
+    display: inline-block;
+    float: left;
+    background: url("../assets/social-sprite.png") ;
+}
+ul.menu li.facebook a {
+    background-position: 0 0;
+}
+ul.menu li.twitter a {
+    background-position: -60px 0;
+}
+ul.menu li.linkedin a {
+    background-position: -240px 0;
+}
