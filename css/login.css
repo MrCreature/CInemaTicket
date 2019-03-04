@@ -30,7 +30,7 @@
 .custom-nav li:hover{
     background-color: lightgrey;
 }
-.custom-card{
+.custom-card {
     width: 100%;
     object-fit: contain;
 }
@@ -57,3 +57,19 @@ ul.menu li.twitter a {
 ul.menu li.linkedin a {
     background-position: -240px 0;
 }
+
+.btnCOOL {
+    color: white;
+    animation: glowing 1500ms infinite;
+}
+.btnCOOL:hover{
+    color:whitesmoke;
+    animation-play-state: paused;
+}
+
+@keyframes glowing {
+    0% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
+    50% { background-color: #FF0000; box-shadow: 0 0 50px #FF0000; }
+    100% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
+}
+
