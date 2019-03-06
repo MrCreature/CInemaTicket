@@ -1,3 +1,7 @@
+.center-content{
+    text-align: center;
+    align-content: center;
+}
 
 #login-body .form-div {
     width: 40%;
@@ -64,7 +68,13 @@ ul.menu li.linkedin a {
 }
 .btnCOOL:hover{
     color:whitesmoke;
-    animation-play-state: paused;
+    /*animation-play-state: initial;*/
+    animation: emptyFrame;
+    background-color: #B20000;
+    box-shadow: 0 0 3px #B20000;
+}
+
+@keyframes emptyFrame {
 }
 
 @keyframes glowing {
