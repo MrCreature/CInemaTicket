@@ -4,6 +4,10 @@
 #home-body .cara-container{
     margin : 5px 400px;
 }
+.center-content{
+    text-align: center;
+    align-content: center;
+}
 .custom-card{
     width: 100%;
     object-fit: contain;
