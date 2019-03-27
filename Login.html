@@ -8,6 +8,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/login.css">
     <script>
         function initializePage() {
@@ -67,24 +68,22 @@
             else if(!regexPass.test(pass)){
                 displayDiv(passPara,"Password must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters");
                 flag=1;
-            }
             return flag !== 1;
         }
 
         function coolRegister() {
-            var newwindow=window.open("RegisterPopUp.html","newWindow","resizeable=no,width=500,height=700");
-
+            var newwindow = window.open("RegisterPopUp.html","newWindow","resizeable=no,width=500,height=700");
+            // var div = document.getElementById("disable-popup-div");
+            // newwindow.addClass("for-popup");
+            // div.addClass("disable-for-form");
             var focusOnThisPopup = setInterval(function() {
                 if (!newwindow.closed) {
                     newwindow.focus();
-                } else {
+                }else {
                     clearInterval(focusOnThisPopup);
                 }
             },50);
-
         }
-
-
     </script>
 </head>
 <body id="login-body" onload="initializePage()">
@@ -115,30 +114,32 @@
         </div>
     </nav>
 </div>
-    <div class="container justify-content-center py-5 shadow-lg form-div">
-        <form name="loginForm" onsubmit="return validateForm()">
-            <h1 class="display-4">Login</h1>
-            <br><br>
-            <div class="form-group">
-                <label for="email">Email-Id</label>
-                <input type="text" id="email" name="email" class="form-control">
-                <div id="emailFail"></div>
-            </div>
-            <div class="form-group">
-                <label for="pass">Password</label>
-                <input type="password" id="pass" class="form-control" name="pass">
-                <div id="passFail"></div>
-            </div>
-            <br>
-            <div class="row">
-                <button type="submit" class="btn btn-dark mx-2 col" >Login</button>
-                <a href="Register.html" class="btn btn-success mx-2 col">Register</a>
-                <button type="button" class="btn btnCOOL mx-2 col" onclick="return coolRegister()">Register (but in a popup)</button>
-            </div>
-        </form>
-    </div>
-    <div class="footer fixed-bottom">
-        <p>THIS IS A FOOTER</p>
+    <div id="disable-popup-div">
+        <div class="container justify-content-center py-5 shadow-lg form-div">
+            <form name="loginForm" onsubmit="return validateForm()">
+                <h1 class="display-4">Login</h1>
+                <br><br>
+                <div class="form-group">
+                    <label for="email">Email-Id</label>
+                    <input type="text" id="email" name="email" class="form-control">
+                    <div id="emailFail"></div>
+                </div>
+                <div class="form-group">
+                    <label for="pass">Password</label>
+                    <input type="password" id="pass" class="form-control" name="pass">
+                    <div id="passFail"></div>
+                </div>
+                <br>
+                <div class="row">
+                    <button type="submit" class="btn btn-dark mx-2 col" >Login</button>
+                    <a href="Register.html" class="btn btn-success mx-2 col">Register</a>
+                    <button type="button" class="btn btnCOOL mx-2 col" onclick="return coolRegister()">Register (but in a popup)</button>
+                </div>
+            </form>
+        </div>
+        <div class="footer fixed-bottom">
+            <p>THIS IS A FOOTER</p>
+        </div>
     </div>
 </body>
 </html>

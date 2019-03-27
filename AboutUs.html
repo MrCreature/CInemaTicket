@@ -9,6 +9,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/login.css">
+    <link rel="stylesheet" type="text/css" href="css/home.css">
+    <script src="js/home.min.js"></script>
 </head>
 <body id="about-body">
 <div class="container-fluid custom-nav  bg-light">
@@ -39,16 +41,16 @@
     </nav>
 </div>
 
-<div class="container-fluid justify-content-center my-5 py-3" align="center">
+<div class="container-fluid justify-content-center my-5 py-3" align="center" id="about-para" style="left: -10px">
     <h1 class="display-4">Welcome</h1>
     <br>
     <p>At our website, we believe everyone should be able to book movie tickets with ease.</p>
     <p>No one should go through the hassle of going to the theatres to pre-book your tickets or waiting in long lines just before the movies starts without knowing whether you would be able to book your tickets or not</p>
 </div>
-<div class="container justify-content-center my-5 py-3 center-content" align="center">
+<div class="container justify-content-center my-5 py-3 center-content" id="table-parent" align="center">
     <h1 class="display-4">Developers</h1>
     <br>
-    <table class="table my-3 justify-content-center" align="center">
+    <table id="about-table" class="table m-3 justify-content-center container" align="center" style="display: none;position: absolute">
         <thead class="thead-dark">
         <tr>
             <th scope="col">Name</th>
@@ -82,7 +84,7 @@
         </tbody>
     </table>
 </div>
-<div class="footer">
+<div class="footer fixed-bottom">
     <p>THIS IS A FOOTER</p>
 </div>
 </body>

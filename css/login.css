@@ -83,3 +83,17 @@ ul.menu li.linkedin a {
     100% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
 }
 
+.disable-for-form{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: 0.8;
+    z-index: 998;
+    height: 100%;
+    width: 100%;
+}
+.for-popup{
+    position: absolute;
+    z-index: 999;
+}
