@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>WELCOME TO SPCINEMA</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+    <link rel="stylesheet" href="./bootstrap-4.3.1-dist/css/bootstrap.min.css"/>
+    <script src="./bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/login.css">
     <script>
         function initializeDiv() {
@@ -125,7 +125,7 @@
 <body id="login-body" onload="initializeDiv()">
 <div class="container-fluid custom-nav  bg-light">
     <nav class="navbar navbar-default navbar-expand-lg navbar-light">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <span class="navbar-brand mb-0 h1">SPCinema</span>
         <div class="navbar-collapse">
             <ul class="navbar-nav ml-auto mr-4">
                 <li class="nav-item">
@@ -154,7 +154,7 @@
     <form name="regForm" onsubmit="return validateForm()">
         <h1 class="display-4">New User</h1>
         <br><br>
-        <div class="form-group row">
+        <div class="form-group form-row">
             <div class="form-group col-md-6">
                 <label for="fname">First Name <span style="color: red;font-weight: bolder">*</span></label>
                 <input type="text" class="form-control" id="fname" placeholder="First Name">
@@ -166,7 +166,7 @@
                 <div id="lnameFail"></div>
             </div>
         </div>
-        <div class="row">
+        <div class="form-group form-row">
             <div class="form-group col">
                 <label for="gender">Gender <span style="color: red;font-weight: bolder">*</span></label>
                 <select id="gender" name="gender" class="form-control">
@@ -182,7 +182,7 @@
             </div>
         </div>
         <br>
-        <div class="form-group row">
+        <div class="form-group form-row">
             <div class="form-group col-md-6">
                 <label for="email">Email-Id <span style="color: red;font-weight: bolder">*</span></label>
                 <input type="text" class="form-control" id="email" placeholder="Email">
@@ -194,11 +194,11 @@
                 <div id="passFail"></div>
             </div>
         </div>
-        <div class="form-group">
+        <div class="form-group form-row">
             <label for="address">Address</label>
             <textarea class="form-control" id="address" rows="3"></textarea>
         </div>
-        <div class="form-row">
+        <div class="form-group form-row">
             <div class="form-group col">
                 <label for="city">City <span style="color: red;font-weight: bolder">*</span></label>
                 <input type="text" class="form-control" id="city">

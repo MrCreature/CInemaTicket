@@ -97,3 +97,7 @@ ul.menu li.linkedin a {
     position: absolute;
     z-index: 999;
 }
+
+.form-control-feedback{
+    /*display: none;*/
+}

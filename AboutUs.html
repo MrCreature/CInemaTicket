@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>WELCOME TO SPCINEMA</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./bootstrap-4.3.1-dist/css/bootstrap.min.css"/>
+    <script src="./bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/login.css">
     <link rel="stylesheet" type="text/css" href="css/home.css">
     <script src="js/home.min.js"></script>
@@ -15,7 +15,7 @@
 <body id="about-body">
 <div class="container-fluid custom-nav  bg-light">
     <nav class="navbar navbar-default navbar-expand-lg navbar-light">
-        <a class="navbar-brand" href="#">SPCinema</a>
+        <span class="navbar-brand mb-0 h1">SPCinema</span>
         <div class="navbar-collapse">
             <ul class="navbar-nav ml-auto mr-4">
                 <li class="nav-item">
@@ -50,15 +50,16 @@
 <div class="container justify-content-center my-5 py-3 center-content" id="table-parent" align="center">
     <h1 class="display-4">Developers</h1>
     <br>
-    <table id="about-table" class="table m-3 justify-content-center container" align="center" style="display: none;position: absolute">
-        <thead class="thead-dark">
-        <tr>
-            <th scope="col">Name</th>
-            <th scope="col">Contributions</th>
-            <th scope="col">Contact Info</th>
-        </tr>
-        </thead>
-        <tbody>
+
+        <table id="about-table" class="table table-light table-border table-hover m-3 justify-content-center container" style="display: none;position: absolute">
+            <thead class="thead-dark">
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Contributions</th>
+                <th scope="col">Contact Info</th>
+            </tr>
+            </thead>
+            <tbody>
             <tr>
                 <td>Amodh Akhelikar</td>
                 <td>Webpage</td>
@@ -81,9 +82,10 @@
                     </ul>
                 </td>
             </tr>
-        </tbody>
-    </table>
+            </tbody>
+        </table>
 </div>
+<br>
 <div class="footer fixed-bottom">
     <p>THIS IS A FOOTER</p>
 </div>
