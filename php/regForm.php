@@ -1,5 +1,6 @@
 <?php
-
+	session_start();
+	$_SESSION["user"] = "false";
     include 'mysql.php';
     
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -20,6 +21,9 @@
             ?>
             <script>
                 alert("Name cannot be Mohit Badve");
+                <?php
+                $_SESSION["user"] = "false";
+                ?>
                 window.history.back();
             </script>
             <?php
@@ -29,6 +33,9 @@
                 ?>
                 <script type="text/javascript">
                     alert("USER ALREADY EXISTS");
+                    <?php
+                    $_SESSION["user"] = "false";
+                    ?>
                     window.history.back();
                 </script>
                 <?php
@@ -41,13 +48,21 @@
                     var url = "<?php echo $_SERVER['HTTP_REFERER'] ?>";
                     url = url.split("/");
                     url = url[url.length - 1].split(".");
+                    alert("REGISTRATION SUCCESSFUL");
+                    <?php
+						$atpos = stripos($email,"@");
+						$email = substr($email,0,$atpos);
+						$_SESSION["user"] = "true";
+						$_SESSION["username"] = $email;
+                    ?>
                     if (url[0] === "Register") {
-                        window.location.href = "../Index.php";
-                    } else if (url[0] === "RegisterPopUp")
+	                    window.location.href = "http://cinematicket";
+                    } else if (url[0] === "RegisterPopUp") {
                         window.close();
-                </script>
-	            <?php
-                exit();
+                    }
+				</script>
+				<?php
+	            exit();
             }
         }
     }

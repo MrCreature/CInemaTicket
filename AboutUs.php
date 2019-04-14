@@ -1,3 +1,8 @@
+<?php
+	session_start();
+	if (!isset($_SESSION['user']) || $_SESSION['user'] == '')
+		$_SESSION["user"] = "false";
+?>
 <!DOCTYPE HTML>
 <html  lang="en">
 <head>
@@ -7,7 +12,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap-theme.min.css">
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/login.css">
     <link rel="stylesheet" type="text/css" href="css/home.css">
@@ -19,36 +23,63 @@
             table.animate({right:'100px'},"slow");
             table.animate({left:'100px'},"slow");
             table.animate({left : cur_pos.left},"slow");
-        })
+
+			$('#logout-but').click(function(){
+                $.ajax({
+                    type: "POST",
+                    url: "php/logout.php"
+                }).done(function( ) {
+                    alert("LOGGED CURRENT USER");
+                    location.reload();
+                });
+            });
+        });
     </script>
 </head>
 <body id="about-body">
-<div class="container-fluid custom-nav  bg-light">
-    <nav class="navbar navbar-default navbar-expand-lg navbar-light">
-        <span class="navbar-brand mb-0 h1">SPCinema</span>
-        <div class="navbar-collapse">
-            <ul class="navbar-nav ml-auto mr-4">
-                <li class="nav-item">
-                    <a class="nav-link" href="Index.php">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="Movies.php">Movies</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="Login.php">Login</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="AboutUs.php">About Us</a>
-                </li>
-            </ul>
-            <form>
-                <div  class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                </div>
-            </form>
-        </div>
-    </nav>
+<div class="container-fluid custom-nav bg-light">
+	<nav class="navbar navbar-default navbar-expand-lg navbar-light">
+		<span class="navbar-brand mb-0 h1">SPCinema</span>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNavDropdown">
+			<ul class="navbar-nav ml-auto mr-4">
+				<li class="nav-item">
+					<a class="nav-link" href="http://cinematicket">Home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="http://cinematicket/Movies.php">Movies</a>
+				</li>
+				<?php
+					if($_SESSION["user"] === "false"){
+						?>
+						<li class="nav-item">
+							<a class="nav-link" href="http://cinematicket/Login.php">Login</a>
+						</li>
+						<?php
+					}
+				?>
+				<li class="nav-item active">
+					<a class="nav-link" href="http://cinematicket/AboutUs.php">About Us</a>
+				</li>
+				<li class="nav-item dropdown">
+					<?php
+						if($_SESSION["user"] === "true"){
+							?>
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<?php echo $_SESSION["username"] ?>
+							</a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+								<button class="dropdown-item" id="logout-but">Logout</button>
+							</div>
+							<?php
+						}
+					?>
+				</li>
+			</ul>
+		</div>
+	</nav>
 </div>
 
 <div class="container-fluid justify-content-center my-5 py-3" align="center" id="about-para" style="left: -10px">
