@@ -1,26 +1,49 @@
 <?php
 
+include 'mysql.php';
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = test_input($_POST["email"]);
     $password = test_input($_POST["pass"]);
     $emailRegEx = "/(spit)/i";
+    $address = "http://localhost:63342/CInemaTicket/";
     if(preg_match($emailRegEx,$email)){
         ?>
         <script>
             alert("Email cannot contain spit");
-            window.location.href = "../Login.html";
+            window.location.href = "<?php echo $address?>"+"Login.html";
         </script>
         <?php
     }
     else{
-        ?>
-        <script type="text/javascript">
-            var email = "<?php echo $email ?>";
-            var pass = "<?php echo $password ?>";
-            alert("Email : "+email+"\nPassword : "+pass);
-            window.location.href = "../Home.html";
-        </script>
-        <?php
+	    if(!check_exists($email,"test")){
+		    ?>
+            <script type="text/javascript">
+                alert("USER DOES NOT EXIST");
+                window.history.back();
+            </script>
+		    <?php
+            exit();
+	    }
+	    elseif(!match_password($email,$password,"test")){
+            ?>
+            <script type="text/javascript">
+                alert("INCORRECT PASSWORD");
+                $_SESSION["loginStat"] = "absent";
+                window.history.back();
+            </script>
+            <?php
+            exit();
+        }
+        else{
+            ?>
+            <script type="text/javascript">
+                alert("LOGIN SUCCESSFUL");
+                window.location.href = "../Index.php";
+            </script>
+            <?php
+            exit();
+        }
     }
 }
 

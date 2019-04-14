@@ -10,7 +10,16 @@
     <script src="./bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/login.css">
     <link rel="stylesheet" type="text/css" href="css/home.css">
-    <script src="js/home.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var table = $("#about-table");
+            table.fadeIn(1000);
+            var cur_pos = table.position();
+            table.animate({right:'100px'},"slow");
+            table.animate({left:'100px'},"slow");
+            table.animate({left : cur_pos.left},"slow");
+        })
+    </script>
 </head>
 <body id="about-body">
 <div class="container-fluid custom-nav  bg-light">
@@ -19,16 +28,16 @@
         <div class="navbar-collapse">
             <ul class="navbar-nav ml-auto mr-4">
                 <li class="nav-item">
-                    <a class="nav-link" href="Home.html">Home</a>
+                    <a class="nav-link" href="Index.php">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="Movies.html">Movies</a>
+                    <a class="nav-link" href="Movies.php">Movies</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="Login.html">Login</a>
+                    <a class="nav-link" href="Login.php">Login</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="AboutUs.html">About Us</a>
+                    <a class="nav-link active" href="AboutUs.php">About Us</a>
                 </li>
             </ul>
             <form>

@@ -24,16 +24,16 @@
         <div class="navbar-collapse">
             <ul class="navbar-nav ml-auto mr-4">
                 <li class="nav-item">
-                    <a class="nav-link" href="Home.html">Home</a>
+                    <a class="nav-link" href="Index.php">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="Movies.html">Movies</a>
+                    <a class="nav-link active" href="Movies.php">Movies</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="Login.html">Login</a>
+                    <a class="nav-link" href="Login.php">Login</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="AboutUs.html">About Us</a>
+                    <a class="nav-link" href="AboutUs.php">About Us</a>
                 </li>
             </ul>
             <form>
