@@ -23,7 +23,7 @@
                     type: "POST",
                     url: "php/logout.php"
                 }).done(function( ) {
-                    alert("LOGGED CURRENT USER");
+                    alert("LOGGED OUT CURRENT USER");
                     location.reload();
                 });
             });
@@ -40,22 +40,22 @@
 		<div class="collapse navbar-collapse" id="navbarNavDropdown">
 			<ul class="navbar-nav ml-auto mr-4">
 				<li class="nav-item">
-					<a class="nav-link" href="http://cinematicket">Home</a>
+					<a class="nav-link" href="/">Home</a>
 				</li>
 				<li class="nav-item active">
-					<a class="nav-link" href="http://cinematicket/Movies.php">Movies</a>
+					<a class="nav-link" href="/Movies.php">Movies</a>
 				</li>
 				<?php
 					if($_SESSION["user"] === "false"){
 						?>
 						<li class="nav-item">
-							<a class="nav-link" href="http://cinematicket/Login.php">Login</a>
+							<a class="nav-link" href="/Login.php">Login</a>
 						</li>
 						<?php
 					}
 				?>
 				<li class="nav-item">
-					<a class="nav-link" href="http://cinematicket/AboutUs.php">About Us</a>
+					<a class="nav-link" href="/AboutUs.php">About Us</a>
 				</li>
 				<li class="nav-item dropdown">
 					<?php

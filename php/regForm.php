@@ -6,7 +6,7 @@
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $fname = test_input($_POST["fname"]);
         $lname = test_input($_POST["lname"]);
-        $gender = test_input($_POST["fname"]);
+        $gender = test_input($_POST["gender"]);
         $age = test_input($_POST["age"]);
         $email = test_input($_POST["email"]);
         $password = test_input($_POST["pass"]);
@@ -56,7 +56,7 @@
 						$_SESSION["username"] = $email;
                     ?>
                     if (url[0] === "Register") {
-	                    window.location.href = "http://cinematicket";
+	                    window.location.href = "/";
                     } else if (url[0] === "RegisterPopUp") {
                         window.close();
                     }

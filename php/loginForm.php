@@ -50,10 +50,9 @@
 							$_SESSION["user"] = "true";
 							$_SESSION["username"] = $email;
 					?>
-					window.location.href = "http://cinematicket";
+					window.location.href = "/";
 				</script>
 				<?php
-//				header("Location: http://cinematicket");
 				exit();
 			}
 		}

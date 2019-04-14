@@ -7,10 +7,9 @@
 	    $servername = "localhost";
 	    $username = "root";
 	    $password = "12345678";
-        
- 
+	    
         $conn = new mysqli($servername, $username, $password, $dbname);
-        $sql = "INSERT INTO `test` (`email`, `pass`, `fname`, `lname`, `gender`, `age`, `address`, `state`, `city`) VALUES ('$email', '$pass', '$fname', '$lname', '$gender', '$age', '$address', '$state', '$state')";
+        $sql = "INSERT INTO `test` (`email`, `pass`, `fname`, `lname`, `gender`, `age`, `address`, `state`, `city`) VALUES ('$email', '$pass', '$fname', '$lname', '$gender', '$age', '$address', '$state', '$city')";
         $conn->query($sql);
         $conn->close();
         
